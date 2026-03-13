@@ -88,4 +88,59 @@
 
 ---
 
+## 🚀 실행 방법
+
+### 사전 요구사항
+- Node.js 18+ 설치
+- PostgreSQL 데이터베이스 (또는 Docker)
+
+### 1. 백엔드 실행
+
+```bash
+cd backend
+
+# 의존성 설치
+npm install
+
+# 환경 변수 설정 (.env.example 참고)
+cp .env.example .env
+# .env 파일을 열어 DATABASE_URL 설정
+
+# 데이터베이스 마이그레이션
+npm run db:migrate
+
+# 개발 서버 실행
+npm run dev
+```
+
+백엔드는 http://localhost:3001 에서 실행됩니다.
+
+### 2. 프론트엔드 실행
+
+```bash
+cd frontend
+
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+```
+
+프론트엔드는 http://localhost:3000 에서 실행됩니다.
+
+### 3. 프로덕션 빌드
+
+```bash
+# 백엔드
+npm run build
+npm start
+
+# 프론트엔드
+npm run build
+npm start
+```
+
+---
+
 *취업 준비는 혼자가 아닙니다. Career PT가 함께합니다.*
